@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function compose_email() {
   // Show compose view and hide other views
+  document.querySelector('#email-detail-view').style.display='none';
   document.querySelector('#emails-view').style.display = 'none';
   document.querySelector('#compose-view').style.display = 'block';
 
@@ -55,6 +56,7 @@ function view_email(id){
       }
       //Archieve/Unarchive logic
       const btn_arch = document.createElement('button');
+      const bkn_arch = document.createElement('br');
       btn_arch.innerHTML = email.archived ? "Unarchive":"Archive";
       btn_arch.className = email.archived ? "btn btn-success" : "btn btn-danger";
       btn_arch.addEventListener('click', function() {
@@ -66,12 +68,13 @@ function view_email(id){
         })
         .then(()=>{load_mailbox('archive')})    
       });
+      document.querySelector('#email-detail-view').append(bkn_arch);
       document.querySelector('#email-detail-view').append(btn_arch);
 
       //Reply logic
       const btn_reply = document.createElement('button');
       btn_reply.innerHTML = "Reply"
-      btn_reply.className = "btn btn-info";
+      btn_reply.className = "btn btn-info ml-3";
       btn_reply.addEventListener('click', function(){
         compose_email();
         document.querySelector('#compose-recipients').value = email.sender;

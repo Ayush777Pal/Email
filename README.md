@@ -13,8 +13,8 @@ On clicking archived button the user will be able to see all the archieved mail 
 On clicking of log out button user will be logout from current account and will be redirected to login page 
 ### Important Features 
 1)On clicking on any mail user will be able to see detail of mail and can even see a archive and reply button
-2)Archive button can toggle to both archive and unarchive mail when clicking on Archieve button the mail will be archived and on clicking on Unarchieve the mail will return back to inbox
-3)Reply button takes user to reply form that will automatically fill the other sender email and its mail content
+2)Archive button can toggle to both archive and unarchive mail when clicking on Archieve button the mail will be archived and on clicking on Unarchieve the mail will return back to inbox<br>
+3)Reply button takes user to reply form that will automatically fill the other sender email and its mail content<br>
 4)login and register page works same as login to make user login to web app and register page makes user register to django development server
 ## Django Database
 Shows the database for user and email data
